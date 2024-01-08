@@ -13,3 +13,9 @@ At the bottom of the wp-config.php file, above the line that says /* That's all,
 define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR',0755);
 define('FS_CHMOD_FILE',0644); 
+
+Тайтл и меню
+https://www.youtube.com/watch?v=Z4MLKyz9d28 
+
+Шаблоны страниц и иерархия папок 
+https://www.youtube.com/watch?v=yFfT2AqBEXc
