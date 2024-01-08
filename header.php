@@ -66,14 +66,10 @@
 									'echo' => true,
 									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
 								]); ?>
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">home</a></li>
-				                    <li class="scroll"><a href="#service">service</a></li>
-				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
-				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
-				                    <li class="scroll"><a href="#brand">brands</a></li>
-				                    <li class="scroll"><a href="#contact">contact</a></li>
-				                </ul><!--/.nav -->
+
+
+				             
+
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
 				    </nav><!--/nav-->
