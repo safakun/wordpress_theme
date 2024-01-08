@@ -14,8 +14,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
         
         <?php  wp_head(); ?>
-        <!-- title of site -->
-        <title>CarVilla</title>
+       
 
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
@@ -59,6 +58,14 @@
 
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+								<?php wp_nav_menu([
+									'theme_location' => 'header',
+									'container' => false,
+									'menu_class' => 'nav navbar-nav navbar-right',
+									'menu_id' => false,
+									'echo' => true,
+									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+								]); ?>
 				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 				                    <li class=" scroll active"><a href="#home">home</a></li>
 				                    <li class="scroll"><a href="#service">service</a></li>

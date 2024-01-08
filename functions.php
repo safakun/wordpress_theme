@@ -2,6 +2,7 @@
 
 if ( ! function_exists('carvilla_digital_setup')) {
     function carvilla_digital_setup() {
+        // добавляем пользовательский логотип
         add_theme_support('custom-logo', [
             'height'      => 70,
             'width'       => 143,
@@ -10,6 +11,8 @@ if ( ! function_exists('carvilla_digital_setup')) {
             'header-text' => '',
             'unlink-homepage-logo' => false,
         ]);
+        // ддбавляем динамический title
+        add_theme_support('title-tag');
     }
     add_action('after_setup_theme', 'carvilla_digital_setup');
 }
@@ -61,4 +64,32 @@ function carvilla_digital_scripts() {
     wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.js', array('easing'), '1.0', true);
 
 
+} 
+
+
+/*
+Регистрация нескольких меню
+*/
+
+function carvilla_digital_menus() {
+    // собираем несколько областей меню
+    $locations = array(
+        'header' => __('Header menu', 'carvilla_digital'),
+        'footer' => __('Footer menu', 'carvilla_digital'),
+    );
+    // регистрируем области меню
+    register_nav_menus($locations);
+}
+// хук события
+add_action('init', 'carvilla_digital_menus');
+
+// добавить класс scroll ко всем пунктам меню 
+add_filter('nav_menu_css_class', 'custom_nav_menu_css_class', 10, 1); 
+
+// получаем весь список классов пунктов меню
+function custom_nav_menu_css_class($classes) {
+    // добавляем к списку классов свой класс
+    $classes[] = 'scroll';
+
+    return $classes;
 }
