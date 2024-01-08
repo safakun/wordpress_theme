@@ -1,5 +1,19 @@
 <?php 
 
+if ( ! function_exists('carvilla_digital_setup')) {
+    function carvilla_digital_setup() {
+        add_theme_support('custom-logo', [
+            'height'      => 70,
+            'width'       => 143,
+            'flex-width'  => false,
+            'flex-height' => false,
+            'header-text' => '',
+            'unlink-homepage-logo' => false,
+        ]);
+    }
+    add_action('after_setup_theme', 'carvilla_digital_setup');
+}
+
 /*
 Подключение стилей и скриптов
 */ 
